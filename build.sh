@@ -20,5 +20,5 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings pa
 git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX; \
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 . build/envsetup.sh; \
-lunch derp_munch-user
+lunch derp_munch-bp1a-userdebug
 make derp
