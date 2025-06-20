@@ -22,5 +22,5 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 rm -rf packages/apps/FlipFlap; \
 git clone https://github.com/Olzhas-Kdyr/packages_apps_FlipFlap.git packages/apps/FlipFlap; \
 . build/envsetup.sh; \
-lunch derp_munch-bp1a-userdebug
+lunch derp_munch-bp1a-userdebug; \
 mka derp
