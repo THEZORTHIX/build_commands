@@ -13,5 +13,5 @@ git clone https://github.com/LineageOS/android_hardware_xiaomi.git hardware/xiao
 cd packages/apps && git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git ViPER4AndroidFX && cd ViPER4AndroidFX && git checkout v4a && cd .. && cd .. && cd ..; \
 
 . build/envsetup.sh; \
-lunch derp_munch-bp1a-userdebug; \
-mka derp
+lunch lineage_nabu-bp1a-userdebug; \
+mka bacon
