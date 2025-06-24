@@ -11,6 +11,8 @@ git clone https://gitlab.com/dev-harsh1998/android_vendor_xiaomi_nabu.git vendor
 git clone https://github.com/neokoni/android_kernel_xiaomi_nabu.git -b lineage-22.2 kernel/xiaomi/nabu; \
 git clone https://github.com/LineageOS/android_hardware_xiaomi.git hardware/xiaomi; \
 cd packages/apps && git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git ViPER4AndroidFX && cd ViPER4AndroidFX && git checkout v4a && cd .. && cd .. && cd ..; \
+rm -f device/lineage/sepolicy/common/vendor/device.te; \
+touch device/lineage/sepolicy/common/vendor/device.te; \
 
 . build/envsetup.sh; \
 breakfast nabu; \
