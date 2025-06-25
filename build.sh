@@ -1,19 +1,27 @@
 
+
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/WitAqua/manifest.git -b 15.2 --git-lfs; \
+repo init -u https://github.com/Black-Iron-Project/manifest -b v15_QPR2 --git-lfs; \
 /opt/crave/resync.sh; \
 /opt/crave/resync.sh; \
 
-git clone https://github.com/dev-harsh1998/android_device_xiaomi_nabu.git device/xiaomi/nabu; \
-git clone https://gitlab.com/dev-harsh1998/android_vendor_xiaomi_nabu.git vendor/xiaomi/nabu; \
-git clone https://github.com/neokoni/android_kernel_xiaomi_nabu.git -b lineage-22.2 kernel/xiaomi/nabu; \
-git clone https://github.com/LineageOS/android_hardware_xiaomi.git hardware/xiaomi; \
-cd packages/apps && git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git ViPER4AndroidFX && cd ViPER4AndroidFX && git checkout v4a && cd .. && cd .. && cd ..; \
-rm -f device/lineage/sepolicy/common/vendor/device.te; \
-touch device/lineage/sepolicy/common/vendor/device.te; \
+rm -rf out/target/product/munch && rm -rf device/xiaomi/munch && rm -rf device/xiaomi/sm8250-common && rm -rf kernel/xiaomi/sm8250; \
+rm -rf vendor/xiaomi/munch && rm -rf vendor/xiaomi/sm8250-common && rm -rf hardware/xiaomi && rm -rf vendor/xiaomi/munch-firmware; \
+rm -rf vendor/xiaomi/miuicamera && rm -rf packages/resources/devicesettings && rm -rf packages/apps/ViPER4AndroidFX; \
+
+git clone https://github.com/hgneo/android_device_xiaomi_munch device/xiaomi/munch; \
+git clone https://github.com/hgneo/android_device_xiaomi_sm8250-common device/xiaomi/sm8250-common; \
+git clone https://gitlab.com/rik-x777/vendor_xiaomi_munch vendor/xiaomi/munch; \
+git clone https://gitlab.com/rik-x777/vendor_xiaomi_sm8250-common vendor/xiaomi/sm8250-common; \
+git clone https://gitlab.com/rik-x777/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
+git clone https://gitlab.com/rik-x777/kernel_xiaomi_sm8250 kernel/xiaomi/sm8250; \
+git clone https://github.com/LineageOS/android_hardware_xiaomi hardware/xiaomi; \
+git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings; \
+git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX; \
+git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
 . build/envsetup.sh; \
-breakfast nabu; \
-brunch nabu
+blkilunch munch userdebug; \
+blki b
