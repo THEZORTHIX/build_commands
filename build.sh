@@ -3,7 +3,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/Black-Iron-Project/manifest -b v15_QPR2 --git-lfs; \
+repo init -u https://github.com/alphadroid-project/manifest -b alpha-15.2 --git-lfs; \
 /opt/crave/resync.sh; \
 /opt/crave/resync.sh; \
 
@@ -22,5 +22,4 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings pa
 git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX; \
 
 . build/envsetup.sh; \
-blkilunch munch userdebug; \
-blki b
+brunch munch
