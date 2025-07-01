@@ -11,6 +11,7 @@ git clone https://github.com/dev-harsh1998/android_device_xiaomi_nabu.git device
 git clone https://gitlab.com/dev-harsh1998/android_vendor_xiaomi_nabu.git vendor/xiaomi/nabu; \
 git clone https://github.com/Nabu-Project/kernel_xiaomi_sm8150; \
 git clone https://github.com/LineageOS/android_hardware_xiaomi.git hardware/xiaomi; \
+cd packages/apps && git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git ViPER4AndroidFX && cd ViPER4AndroidFX && git checkout v4a && cd .. && cd .. && cd ..; \
 
 . build/envsetup.sh; \
 brunch munch
