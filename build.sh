@@ -3,7 +3,8 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs; \
+#repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs; \
+repo init -u https://github.com/WitAqua/manifest.git -b 16.0 --git-lfs; \
 /opt/crave/resync.sh; \
 /opt/crave/resync.sh; \
 
@@ -14,6 +15,8 @@ git clone https://github.com/LineageOS/android_hardware_xiaomi.git hardware/xiao
 cd packages/apps && git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git ViPER4AndroidFX && cd ViPER4AndroidFX && git checkout v4a && cd .. && cd .. && cd ..; \
 
 . build/envsetup.sh; \
-lunch lineage_nabu-bp2a-user; \
-m evolution
+#lunch lineage_nabu-bp2a-user; \
+#m evolution; \
+breakfast nabu
+brunch nabu
 
