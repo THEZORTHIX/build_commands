@@ -23,6 +23,7 @@ git clone https://github.com/LineageOS/android_hardware_xiaomi hardware/xiaomi; 
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings; \
 git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX; \
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
+rm -rf prebuilts/clang/host/linux-x86; \
 . build/envsetup.sh; \
 breakfast munch
 brunch munch
