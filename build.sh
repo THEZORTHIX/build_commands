@@ -3,7 +3,8 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/crdroidandroid/android -b 15.0 --git-lfs; \
+#repo init -u https://github.com/crdroidandroid/android -b 15.0 --git-lfs; \
+repo init -u https://github.com/WitAqua/manifest.git -b 15 --git-lfs; \
 /opt/crave/resync.sh; \
 /opt/crave/resync.sh; \
 
@@ -22,4 +23,5 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings pa
 git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX; \
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 . build/envsetup.sh; \
+breakfast munch
 brunch munch
