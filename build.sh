@@ -5,7 +5,8 @@
 rm -rf .repo/local_manifests; \
 #repo init -u https://github.com/crdroidandroid/android -b 15.0 --git-lfs; \
 #repo init -u https://github.com/WitAqua/manifest.git -b 15 --git-lfs; \
-repo init -u https://github.com/WitAqua/manifest.git -b 16.0 --git-lfs; \
+repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs; \
+#repo init -u https://github.com/WitAqua/manifest.git -b 16.0 --git-lfs; \
 rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
 /opt/crave/resync.sh; \
